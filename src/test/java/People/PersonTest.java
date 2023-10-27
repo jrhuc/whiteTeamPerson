@@ -21,28 +21,38 @@ class PersonTest {
 
     @org.junit.jupiter.api.Test
     void findAgeOfPerson() {
-        assertEquals(23,test.findAgeOfPerson());
+        int expectedOutput = 23;
+        int actualOutput = test.findAgeOfPerson();
+        assertEquals(expectedOutput, actualOutput);
     }
 
     @org.junit.jupiter.api.Test
     void millisToYears() {
-//        long millis = 31557600000L;
-        assertEquals(1,test.millisToYears(31557600000L));
+        long millis = 31557600000L;
+        int expectedOutput = 1;
+        int actualOutput = test.millisToYears(millis);
+        assertEquals(expectedOutput,actualOutput);
     }
 
     @Test
     void setFirstName() {
         test.setFirstName("random");
-        assertEquals("random", test.getFirstName());
+        String expectedOutput = "random";
+        String actualOutput = test.getFirstName();
+        assertEquals(expectedOutput, actualOutput );
     }
 
     @org.junit.jupiter.api.Test
     void formatDate() {
-        assertEquals("11-Dec-1999",test.formatDate(test.getDateOfBirth()));
+        String expectedOutput = "11-Dec-1999";
+        String actualOutput = test.formatDate(test.getDateOfBirth());
+        assertEquals(expectedOutput,actualOutput);
     }
 
     @org.junit.jupiter.api.Test
     void testToString() {
-        assertEquals("Name: Test Person Age: 23 Date Of Birth: 11-Dec-1999", test.toString());
+        String expectedOutput = "Name: Test Person Age: 23 Date Of Birth: 11-Dec-1999";
+        String actualOutput = test.toString();
+        assertEquals(expectedOutput,actualOutput );
     }
 }
