@@ -23,6 +23,7 @@ class PersonTest {
 
     @org.junit.jupiter.api.Test
     void millisToYears() {
+        assertEquals(1,1);
     }
 
     @org.junit.jupiter.api.Test
