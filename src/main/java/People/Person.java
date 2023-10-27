@@ -35,9 +35,9 @@ public class Person {
         return dateOfBirth;
     }
 
-    public void setDateOfBirth(GregorianCalendar dateOfBirth) {
+   /* public void setDateOfBirth(GregorianCalendar dateOfBirth) {
         this.dateOfBirth = dateOfBirth;
-    }
+    }*/
 
     /**
      * Returns the person's current age by checking their date of birth
@@ -61,7 +61,7 @@ public class Person {
      * @param milliseconds a long representing time in milliseconds
      * @return an integer representing this time in years, rounded down
      */
-    protected int millisToYears(long milliseconds) {
+    public int millisToYears(long milliseconds) {
         milliseconds = milliseconds / 315576;
         return (int) milliseconds / 100000;
     }
@@ -73,7 +73,7 @@ public class Person {
      * @return a String in the dd-MMM-yyyy format
      */
 
-    protected String formatDate(Calendar calendar) {
+    public String formatDate(Calendar calendar) {
         SimpleDateFormat fmt = new SimpleDateFormat("dd-MMM-yyyy");
         fmt.setCalendar(calendar);
 
